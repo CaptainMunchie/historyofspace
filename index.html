@@ -1,0 +1,362 @@
+<!--
+/* 
+ * MAS2041 2020 - Major Project
+ * Name: Jeffrey Song
+ * Student Number: 45405735
+*/
+-->
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MMCC2041</title>
+<link href="styles.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<script>
+$(document).ready(function() { 
+
+
+// watch video Section
+
+function toggle(){
+        var trailer = document.querySelector(".watch-video")
+        var iframe = document.querySelector("iframe")
+        trailer.classList.toggle("active")
+        iframe.pause();
+        iframe.currentTime = 0;
+    }
+
+
+// TimeLine Section
+$(".step").click( function() {
+	$(this).addClass("active").prevAll().addClass("active");
+	$(this).nextAll().removeClass("active");
+});
+
+$(".step01").click( function() {
+	$("#line-progress").css("width", "3%");
+	$(".discovery").addClass("active").siblings().removeClass("active");
+});
+
+$(".step02").click( function() {
+	$("#line-progress").css("width", "25%");
+	$(".strategy").addClass("active").siblings().removeClass("active");
+});
+
+$(".step03").click( function() {
+	$("#line-progress").css("width", "50%");
+	$(".creative").addClass("active").siblings().removeClass("active");
+});
+
+$(".step04").click( function() {
+	$("#line-progress").css("width", "75%");
+	$(".production").addClass("active").siblings().removeClass("active");
+});
+
+$(".step05").click( function() {
+	$("#line-progress").css("width", "100%");
+	$(".analysis").addClass("active").siblings().removeClass("active");
+});
+
+
+
+
+})
+</script>
+</head>
+<body>
+    <header id="menu">
+        <div class="menu container">
+            <div class="nav-bar">
+                <div class="brand logo">
+                    <a href="#"><img src="images/logo.png" ></a>
+                </div>
+                <div class="nav-list">
+                    <div class="hamburger"><div class="bar"></div></div>
+                    <ul>
+                        <li><a href="index.html" data-after="Home">Home</a></li>
+                        <li><a href="timeline.html" data-after="Timeline">Timeline</a></li>
+                        <li><a href="mankind.html" data-after="Mankind">Mankind</a></li>
+                        <li><a href="mission.html" data-after="Mission">Mission</a></li>
+                        <li><a href="about.html" data-after="About">About</a></li>
+                        <!-- <li><a href="contact.html" data-after="Contact">Contact</a></li> -->
+                        <!-- <li><a href="reference.html" data-after="reference">Reference</a></li> -->
+                    </ul>
+                </div>
+            </div>
+
+            
+        
+    </header>
+
+    <!--                                        Banner Section                                        -->
+    <section class="banner">
+        <div class="title">
+            <h2>Welcome to <span></span></h2>
+            <h1>History of Space <span></span></h1>
+        </div>
+    
+        <div class="button">
+            <a href="#" class="btn" id="videolink" onclick="toggle();">WATCH VIDEO</a>
+            <a href="#info" class="btn">LEARN MORE</a>
+    
+        </div>
+    
+        <section>
+            <div class="video">
+                <iframe width="853" height="480" src="https://www.youtube.com/embed/ZL4yYHdDSWs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <img src="images/x.png" class="close" onclick="toggle();">
+            </div>
+            
+        </section>
+        
+        <script type="text/javascript">
+            function toggle(){
+                var trailer = document.querySelector(".video")
+                var iframe = document.querySelector("iframe")
+                trailer.classList.toggle("active")
+                iframe.pause();
+                iframe.currentTime = 0;
+            }
+        </script>
+
+<!--                                        Aniamted Background Section                                      -->
+        <div class="sky">
+            <div class="stars1"></div>
+            <div class="stars2"></div>
+        </div>
+
+<!--                                        End Aniamted Background Section                                      -->
+
+        
+    </section>
+    <!--                                        End Banner Section                                      -->
+
+    <!--                                        Learn More Section                                        -->
+    <section id="info">
+        <div class="info container">
+            <div class="info-top">
+                <h1 class="section-title">Learn More</h1>
+                <p>Learning the mystery of space and hope to share the theories discovered throughout this journey in hopes to inspire the world of this exciting adventure. 
+                    Join us and learn more fascinating things through this website as we explore:
+                </p>
+            </div>
+            <div class="info-bottom">
+                <div class="info-item">
+                    <div class="icon">
+                        <img src="https://img.icons8.com/fluent/96/000000/info.png"/>
+                    </div>
+                    <h2>Timeline</h2>
+                    <p>The day when mankind first discovered that there is another world here beside us, we have taken many step and procedures in order to reach in the sky. This website will analyse a list of all mankinds accomplishment that have flown .</p>
+                    <!-- <p>What man has reached with their bare hands and took their first step into the unknown, we have it all recorded down in this site making it easeir for everyone to find.</p> -->
+                </div>
+                <div class="info-item">
+                    <div class="icon">
+                        <img src="https://img.icons8.com/fluent/96/000000/info.png"/>
+                    </div>
+                    <h2>Mission</h2>
+                    <p>Mankind's greatest tool is their mind as their hunger for knowledge for the unknown that lead them to leap from planets to planets. This website will document most of their missions that they have taken into space and what was discovered.</p>
+                </div>
+                <div class="info-item">
+                    <div class="icon">
+                        <img src="https://img.icons8.com/fluent/96/000000/info.png"/>
+                    </div>
+                    <h2>Descoveries</h2>
+                    <p>Updating the people of what mysterious things that have been discovered whether its a new planet, minerals, theories, of a living organism existing somewhere faraway we will find it. This website will display one of many fascinating discoveries that are mysterious to earth minerals and logic.</p>
+                </div>
+                
+                <div class="info-item">
+                    <div class="icon">
+                        <img src="https://img.icons8.com/fluent/96/000000/info.png"/>
+                    </div>
+                    <h2>Mankind</h2>
+                    <p>We must not forget the people who have devoted their lives into research and studying of space that we are able to access so much information now available to the world. Their lifes's experience is the greatest teaching to our society that we should never forget.</p>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="line-container">
+            <div class="line">
+                <div class="circle">
+                    <div class="line-logo"><img src="images/logo1.png"></div>
+                </div>
+                
+        </div>
+        
+    </section>
+    <!--                                        End Learn More Section                                        -->
+    
+    </div>
+    <!--                                        Timeline Section                                        -->
+
+    <section id="timeline">
+
+        <div class="info-top">
+            <h1 class="section-title">Goals</h1>            
+        </div> 
+
+        <div class="timeline">
+
+                   
+            <br> 
+            <div class="process-wrapper">
+            <div id="progress-bar-container">
+                <ul>
+                    <li class="step step01 active"><div class="step-inner">Discover</div></li>
+                    <li class="step step02"><div class="step-inner">Learn</div></li>
+                    <li class="step step03"><div class="step-inner">Invent</div></li>
+                    <li class="step step04"><div class="step-inner">Help</div></li>
+                    <li class="step step05"><div class="step-inner">Enjoy</div></li>
+                </ul>
+                
+                <div id="line">
+                    <div id="line-progress"></div>
+                </div>
+            </div>
+
+            <div id="progress-content-section">
+                <div class="section-content discovery active">
+                    <h2>DISCOVER SECTION</h2>
+                    <img src="images/bg3.jpg" >
+                    <p>The universe is a pretty big place and countless mind-bending phenomena happens there every day. There are tones of exciting new discoveries in space captured whether is the first black hole, the sun's atmosphere, or the far side of the moon, this website hopes to find them all and introduce it to the people.</p>
+                </div>
+                
+                <div class="section-content strategy">
+                    <h2>LEARN SECTION</h2>
+                    <img src="images/bg4.jpg" >
+                    <p>To learn from these unique features of space whether is physical, mechanical, mental, spiritual, space have it all with its ever expanding knowledge. It is up to us to find it and used the well refound knowledge to help the world or ourselves.</p>
+                </div>
+                
+                <div class="section-content creative">
+                    <h2>INVENT SECTION</h2>
+                    <img src="images/bg5.jpg" >
+                    <p>With the constant hunger of invention, mankind's greatest assest will help us reach to the far corners that our hand can never reach. These technology that have helped many great projects has also been developed into society for their comfort. This website will help remind how all of these technology tranformed the world from moving on land, diving into the ocean of flying into the sky.</p>
+                </div>
+                
+                <div class="section-content production">
+                    <h2>HELP SECTION</h2>
+                    <img src="images/bg6.jpg" >
+                    <p>THis website is not here just to learn the truth of the world but also to give guidance to society and teach them valuable lessons in hope to unite mankind together. This vast knowledge is the greatest tool yet to be discovered, with time and patience will we be able to solve so many problem with have on this planet and understand its needs.</p>
+                </div>
+                
+                <div class="section-content analysis">
+                    <h2>ENJOY</h2>
+                    <img src="images/bg7.png" >
+                    <p>Overall, this website hopes for you guys to have an open curious mind who enjoys to discover more of the universe. we hope that you can learn something during your time on this website and that it can help you daily lives or even just share it around your community. Thank you.</p>
+                </div>
+                </div>
+            </div>
+
+        </div>
+        
+    </section>
+
+    <!--                                        End Timeline Section                                        -->
+
+
+
+    <!--                                        Contact Section                                        -->
+    <section id="contact">
+        <div class="contact container">
+            <div>
+                <h1 class="section-title">Contact</h1>
+            </div>
+            <div class="contact-items">
+                <div class="contact-item">
+                    <div class="icon"><img src="https://img.icons8.com/nolan/96/phone.png"/></div>
+                    <div class="contact-info">
+                        <h1>Phone</h1>
+                        <h2>+1 234 547 890</h2>
+                        <h2>+1 234 547 890</h2>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon"><img src="https://img.icons8.com/nolan/96/email.png"/></div>
+                    <div class="contact-info">
+                        <h1>Email</h1>
+                        <h2>Spaceinfo@gmail.com</h2>
+                        
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon"><img src="https://img.icons8.com/nolan/96/address.png"/></div>
+                    <div class="contact-info">
+                        <h1>Address</h1>
+                        <h2>Space Industry 101</h2>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--                                        End Contact Section                                        -->
+
+
+
+    <!--                                        Footer Section                                        -->
+    
+    <section id="footer">
+        
+        <div class="footer container">
+            <div class="brand">
+                <h1>Life In Space</h1>
+            </div>
+            <h2>Information of the website</h2>
+            <div class="social-icon">
+                <div class="social-item">
+                    <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO"><img src="https://img.icons8.com/nolan/96/facebook-new.png"/></a>
+                </div>
+                <div class="social-item">
+                    <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO"><img src="https://img.icons8.com/nolan/96/instagram-new.png"/></a>
+                </div>
+                <div class="social-item">
+                    <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO"><img src="https://img.icons8.com/nolan/96/twitter.png"/></a>
+                </div>
+                <div class="social-item">
+                    <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO"><img src="https://img.icons8.com/nolan/96/skype.png"/></a>
+                </div>
+            </div>
+            <p class="copyright">copyright &copy; Reserved. All content and images were used for educational purposes. MMCC2041 History Space 2020.</p>
+        </div>
+    </section>
+    <!--                                        End Footer Section                                        -->
+
+    <a href="#" class="gotopbtn"><i class="fa fa-arrow-up"></i></a>
+
+    <script src="./app.js"></script>
+</body>
+</html>
+
+
+<!-- 
+
+Index.html Reference
+
+Content
+	• Original
+
+Image
+
+	• Logo
+		○ https://www.freepik.com/premium-vector/astronaut-logo_4207098.htm
+
+	• Banner section
+		○ https://www.freepik.com/free-vector/earth-view-night-from-alien-planet-neon-space_5603526.htm
+	• Learn more section
+		○ https://www.freepik.com/free-vector/planets-outer-space-with-satellites-meteors-illustration_6690897.htm
+	• Goal section
+		○ https://www.freepik.com/free-vector/flat-space-exploration-composition-with-astronauts-fix-satellite-mars-colonization-scientists-rocket-launch_9456159.htm#page=1&query=space%20discover&position=2
+		○ https://www.freepik.com/free-vector/cute-astronaut-operating-laptop-cartoon-vector-icon-illustration-science-technology-icon_10411620.htm#page=1&query=astronaut&position=13
+		
+
+Video
+    • https://www.youtube.com/watch?v=ZL4yYHdDSWs&ab_channel=Kurzgesagt%E2%80%93InaNutshell
+
+
+ -->

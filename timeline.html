@@ -1,0 +1,635 @@
+<!--
+/* 
+ * MAS2041 2020 - Major Project
+ * Name: Jeffrey Song
+ * Student Number: 45405735
+*/
+-->
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+<title>MMCC2041</title>
+<link href="styles.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<link href="swiper.min.css" rel="stylesheet" />
+
+<script>
+$(document).ready(function() { 
+
+
+// watch video Section
+
+function toggle(){
+        var trailer = document.querySelector(".watch-video")
+        var iframe = document.querySelector("iframe")
+        trailer.classList.toggle("active")
+        iframe.pause();
+        iframe.currentTime = 0;
+    }
+
+
+// TimeLine Section
+$(".step").click( function() {
+	$(this).addClass("active").prevAll().addClass("active");
+	$(this).nextAll().removeClass("active");
+});
+
+$(".step01").click( function() {
+	$("#line-progress").css("width", "3%");
+	$(".discovery").addClass("active").siblings().removeClass("active");
+});
+
+$(".step02").click( function() {
+	$("#line-progress").css("width", "25%");
+	$(".strategy").addClass("active").siblings().removeClass("active");
+});
+
+$(".step03").click( function() {
+	$("#line-progress").css("width", "50%");
+	$(".creative").addClass("active").siblings().removeClass("active");
+});
+
+$(".step04").click( function() {
+	$("#line-progress").css("width", "75%");
+	$(".production").addClass("active").siblings().removeClass("active");
+});
+
+$(".step05").click( function() {
+	$("#line-progress").css("width", "100%");
+	$(".analysis").addClass("active").siblings().removeClass("active");
+});
+
+
+})
+</script>
+</head>
+<body>
+    <header id="menu">
+        <div class="menu container">
+            <div class="nav-bar">
+                <div class="brand logo">
+                    <a href="index.html"><img src="images/logo.png" ></a>
+                </div>
+                <div class="nav-list">
+                    <div class="hamburger"><div class="bar"></div></div>
+                    <ul>
+                        <li><a href="index.html" data-after="Home">Home</a></li>
+                        <li><a href="#active" data-after="Timeline">Timeline</a></li>
+                        <li><a href="mankind.html" data-after="Mankind">Mankind</a></li>
+                        <li><a href="mission.html" data-after="Mission">Mission</a></li>
+                        <li><a href="about.html" data-after="About">About</a></li>
+                        <!-- <li><a href="contact.html" data-after="Contact">Contact</a></li> -->
+                        <!-- <li><a href="reference.html" data-after="reference">Reference</a></li> -->
+                    </ul>
+                </div>
+            </div>
+        
+        
+    </header>
+
+
+    <!--                                        Banner Section                                        -->
+    <section class="timeline-banner banner">
+        <div class="sky">
+            <div class="stars3"></div>
+
+        </div>
+        <div class="title">
+            
+            <h1>Timeline <span></span></h1>
+        </div>
+    
+        <div class="spaceContainer">
+
+            
+            <ul id="scene">
+                <!-- <li class="layer background" id="background"><img src="images/bg2.jpg"></li> -->
+                <li class="layer planet1" ><img src="images/planet1.png" id="planet1"></li>
+                <li class="layer planet2" ><img src="images/planet2.png" id="planet2"></li>
+                <li class="layer astronaut" ><img src="images/astronaut.png" id="astronaut"></li>
+                <li class="layer rocket" ><img src="images/rocket.png" id="rocket"></li>
+            </ul>
+        </div>
+        <script type="text/javascript">
+            // let background = document.getElementById("background");
+            let planet1 = document.getElementById("planet1");
+            let planet2 = document.getElementById("planet2");
+            let astronaut = document.getElementById("astronaut");
+            let rocket = document.getElementById("rocket");
+
+            window.addEventListener('scroll', function(){
+                var value = window.scrollY;
+
+                // background.style.top = value * 0.5 + 'px';
+                planet1.style.left = -value * 0.2 + 'px';
+                planet1.style.top = -value * 0.2 + 'px';
+                planet2.style.top = value * 0.3 + 'px';
+                planet2.style.left = value * 0.3 + 'px';
+                astronaut.style.top = -value * 0.1 + 'px';
+                astronaut.style.left = -value * 0.1 + 'px';
+                rocket.style.left = value * 0.7 + 'px';
+                rocket.style.top = -value * 0.7 + 'px';
+                
+            })
+        </script>
+        
+<!--                                        End Aniamted Background Section                                      -->
+
+        
+    </section>
+    <!--                                        End Banner Section                                      -->
+
+<!-- Timeline vertical Extension -->
+<section id="timelineVertival">
+    <div class="info-top">
+        <h1 class="section-title">Timeline</h1>            
+    </div> 
+
+    <div class="summary">
+        <p>This Page will explore the timeline of how mankind first discover a world beyound their atmosphere, and the process of how they build themselves up from build rocket ships to send astronauts into space and now maybe even imigrate onto another planet later in the future.</p>
+    </div>
+
+    <div class="timelineVertical">
+        <ul>
+            <li>
+                <div class="content">
+                    <h1>4 October</h1>
+                    <p>
+                        Sputnik 1 becomes the first human-made object to orbit the Earth and triggers the frenetic ‘space race’ between the Soviet Union and the USA.
+                    </p>
+                    <img src="images/img1.jpg">
+                </div>
+                <div class="time">
+                    <h4>1957</h4>
+                    
+                </div>
+                
+            </li>
+            <li>
+                <div class="content">
+                    <h1>3 November</h1>
+                    <p>
+                        Sputnik 2 carries the dog Laika, who becomes the first living animal to travel into space. (She dies within seven hours of launch.)
+                    </p>
+                    <img src="images/animal.jpg">
+                </div>
+                <div class="time">
+                    <h4>1957</h4>
+                </div>
+                
+            </li>
+            <li>
+                <div class="content">
+                    <h1>31 January</h1>
+                    <p>
+                        Explorer 1 lifts off from Cape Canaveral Air Force Station, Florida, to become the first US artificial Earth satellite. NASA is founded in October of this year.
+                    </p>
+                    <img src="images/img2.jpg">
+                </div>
+                <div class="time">
+                    <h4>1958</h4>
+                </div>
+            </li>
+            <li>
+                <div class="content">
+                    <h1>25 May</h1>
+                    <p>
+                        President Kennedy declares the US space objective to put a man on the moon and return them safely by the end of the decade.
+                    </p>
+                    <img src="images/img3.jpg">
+                </div>
+                <div class="time">
+                    <h4>1961</h4>
+                </div>
+            </li>
+            <li>
+                <div class="content">
+                    <h1>16-19 June</h1>
+                    <p>
+                        Cosmonaut Valentina Tereshkova, the first woman in space, completes 48 orbits.
+                    </p>
+                    <img src="images/img4.jpg">
+                </div>
+                <div class="time">
+                    <h4>1963</h4>
+                </div>
+            </li>
+            <li>
+                <div class="content">
+                    <h1>21 December</h1>
+                    <p>
+                        First manned spacecraft to orbit moon, Apollo 8, comes within 112km of lunar surface.
+                    </p>
+                    <img src="images/img5.jpg">
+                </div>
+                <div class="time">
+                    <h4>1968</h4>
+                </div>
+            </li>
+            <li>
+                <div class="content">
+                    <h1>7-19 December</h1>
+                    <p>
+                        Apollo 17 mission was the longest stay of man on the moon 74 hours, 59 minutes by astronauts Eugene Cernan and Harrison Schmitt.
+                </div>
+                <img src="images/img6.jpg">
+                <div class="time">
+                    <h4>1972</h4>
+                </div>
+            </li>
+            <li>
+                <div class="content">
+                    <h1>6 August</h1>
+                    <p>
+                        NASA's Curiosity rover successfully lands on Mars. It is the largest and most advanced rover ever to land on the red planet.
+                    </p> 
+                    <img src="images/img7.jpg">   
+                </div>
+                <div class="time">
+                    <h4>2012</h4>
+                </div>
+            </li>
+            <li>
+                <div class="content">
+                    <h1>30 May</h1>
+                    <p>
+                        SpaceX makes history as the first private company to launch astronauts into space. The Crew Demo 2 test flight successfully launches two astronauts into orbit on a mission to the International Space Station (ISS).
+                    </p>
+                    <img src="images/img8.jpg">
+                </div>
+                <div class="time">
+                    <h4>2020</h4>
+                </div>
+            </li>
+            <div style="clear: both;"></div>
+        </ul>
+    </div>
+
+</section>
+
+<!--                                        End Timeline vertical Extension                                         -->
+
+<div class="line-container">
+    <div class="line">
+        <div class="circle">
+            <div class="line-logo"><img src="images/logo1.png"></div>
+        </div>
+    </div>    
+</div>
+
+<!--                                        Touch Slider Section                                      -->
+    <section class="touchSlider">
+        <h1 class="section-title">Discovery</h1>
+
+        <div class="summary">
+            <p>It is through mankind's sacrifice and many amount of missions taken into space were we able to push our limits of making the impossible possible. This helped breakthrough the mystery of the universe and capture of the greatest historical event in human history. Supporting mankind in finding habitable places, understanding the nature of the universe or even later on in the future finding biological species with intelligence.</p>
+        </div>
+        
+        <div class="swiper-container">
+            <div class="slider-items swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="sliderCard">
+                            <div class="sliderText">
+                                <!-- <h3>Slide One</h3> -->
+                                <img src="images/img9.jpg">
+                            </div>
+                            <div class="sliderContent">
+                                <h3>First Planets Outside Our Solar System Found</h3>
+                                <p>
+                                    In 1992 humanity has discovered a planet outside of our solar system, this was detected when two extrasolar planets were orbiting around pulsar, a remnant core of a dead start in the constellation Virgo.
+                                </p>
+                                
+                                <div class="read-more-content">
+                                    <!-- <h3>Slide One</h3> -->
+                                    <!-- <img src="images/img9.jpg" alt="img"> -->
+                                    <iframe width="100%" height="300px" src="https://www.youtube.com/embed/9xhNd-HSq0k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <p>
+                                        In 1992 humanity has discovered a planet outside of our solar system, this was detected when two extrasolar planets were orbiting around pulsar, a remnant core of a dead start in the constellation Virgo.
+                                    </p>
+                                    <p>
+                                        A total of 4,096 planets in almost 3,000 planetary systems outside our solar system has been confirmed, in which of them are neighbourhood of the Milky Way galaxy.
+                                    </p>
+                                    <p>
+                                        Discovered by NASA's Kepler Space Telescope our knowledge of the world has now broaden as we are not alone in this universe.
+                                    </p>
+
+                                </div>
+                                <!-- <a href="#" type="button">Read More</a> -->
+                                <button class="btn" type="button">Read More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="sliderCard">
+                            <div class="sliderText">
+                                <!-- <h3>Slide One</h3> -->
+                                <img src="images/img10.jpg">
+                            </div>
+                            <div class="sliderContent">
+                                <h3>The Expansion of the Universe is Speeding Up</h3>
+                                <p>
+                                    In 1998, the scientific community had discovered that our universe is not only expanding at an accelerating rate but the opposite. 
+                                </p>
+                                
+                                <div class="read-more-content">
+                                    <iframe width="100%" height="300px" src="https://www.youtube.com/embed/k9EKnqzNBWQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <p>
+                                        In 1998, the scientific community had discovered that our universe is not only expanding at an accelerating rate but the opposite. 
+                                    </p>
+                                    <p>
+                                        They believed that the gravitational attraction by matter within the universe is slowing down the expansion. This idea has brought the birth of "dark energy", which is thought to "permeate the universe and exert a repulsive force on all large-scale structures". Its nature remains unknown but is estimated that 68% of the overall universe is made up of dark energy.
+                                    </p>
+                                    <p>
+                                        To learn more of this amazing scientific research, join the multicultural community who wishes to break through the mystery of the universe by clicking on our contact section.
+                                    </p>
+                                    
+                                </div>
+                                <!-- <a href="#" type="button">Read More</a> -->
+                                <button class="btn" type="button">Read More</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="sliderCard">
+                            <div class="sliderText">
+                                <!-- <h3>Slide One</h3> -->
+                                <img src="images/img11.jpg">
+                            </div>
+                            <div class="sliderContent">
+                                <h3>An Ocean on Jupiter's Moon</h3>
+                                <p>
+                                    In 1995, NASA's Galileo mission has confirmed the existence of a massive ocean of liquid water, concealed beneath the icy crust of Jupiter's moon Europa.
+
+                                </p>
+                                
+                                <div class="read-more-content">
+                                    <!-- <h3>Slide One</h3> -->
+                                    <iframe width="100%" height="300px" src="https://www.youtube.com/embed/DZC-HfvMZnM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <p>
+                                        In 1995, NASA's Galileo mission has confirmed the existence of a massive ocean of liquid water, concealed beneath the icy crust of Jupiter's moon Europa.
+
+                                    </p>
+                                    <p>
+                                        Images captured by the Galileo mission suggested that the ice is floating on top of an ocean estimated to be 100 miles deep and contains twice the amount of Earth's ocean.
+                                    </p>
+                                    <p>
+                                        NASA and ESA are excited to send off missions to discover any biological organisms that may exist beside on Earth.
+                                    </p>
+
+                                </div>
+                                <!-- <a href="#" type="button">Read More</a> -->
+                                <button class="btn" type="button">Read More</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="sliderCard">
+                            <div class="sliderText">
+                                <!-- <h3>Slide One</h3> -->
+                                <img src="images/img12.jpg">
+                            </div>
+                            <div class="sliderContent">
+                                <h3>Black Holes Collide</h3>
+                                <p>
+                                    In 2016, researchers at LIGO (Laser Interferometer Gravitational-wave Observatory) discovered a gravitational waves are having disturbances or ripples in the fabric of space-time.
+                                </p>
+                                
+                                <div class="read-more-content">
+                                    <iframe width="100%" height="300px" src="https://www.youtube.com/embed/rJLtT0QXoPo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <p>
+                                        In 2016, researchers at LIGO (Laser Interferometer Gravitational-wave Observatory) discovered a gravitational waves are having disturbances or ripples in the fabric of space-time.
+                                    </p>
+                                    <p>
+                                        The detection of theses massive objects in space at accelerating speed had allowed us to perceive events that cannot be observed from NASA's Space Telescope.
+                                    </p>
+                                    <p>
+                                        LIGO's highly sensitive laser and mirror was able to measure the distortions in space-time smaller than the nucleus of an atom was it able to detect the collision of two black hole.
+                                    </p>
+                                    
+                                </div>
+                                <!-- <a href="#" type="button">Read More</a> -->
+                                <button class="btn" type="button">Read More</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="sliderCard">
+                            <div class="sliderText">
+                                <!-- <h3>Slide One</h3> -->
+                                <img src="images/img13.jpg">
+                            </div>
+                            <div class="sliderContent">
+                                <h3>First Image of a Black Hole</h3>
+                                <p>
+                                    In 2019, The Event Horizon Telescope also known as EHT had achieved the impossible and captured an image of the black hole.
+                                </p>
+                                
+                                <div class="read-more-content">
+                                    <iframe width="100%" height="300px" src="https://www.youtube.com/embed/S_GVbuddri8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <p>
+                                        In 2019, The Event Horizon Telescope also known as EHT had achieved the impossible and captured an image of the black hole.
+                                    </p>
+                                    <p>
+                                        The Super massive black hole caught on camera was 53 million light years away from Earth that has the equivalent mass of 6.5 billion starts which is the size of our sun.
+                                    </p>
+                                    <p>
+                                        This is one of mankind's greatest achievement as the black hole is one of the ultimate dark object in the universe. This was thought to be impossible due to its strong gravitational pull that prevents light from escaping but now became the possible.
+                                    </p>
+                                    
+                                </div>
+                                <!-- <a href="#" type="button">Read More</a> -->
+                                <button class="btn" type="button">Read More</button>
+                            </div>
+                        </div>
+                    </div>      
+                </div>
+
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>            
+        </div>
+        
+
+        <!-- Read more popup box section         -->
+        <div class="popup-box">
+            <div class="popup-content">
+                <div class="popup-header">
+                    <h3>Slide</h3>
+                    <span class="popup-close-icon">&times;</span>
+                </div>
+                <div class="popup-body">
+                    <p>
+                        Info
+                    </p>
+                    
+                   
+                </div>
+                <div class="popup-footer">
+                    <button class="popup-close-btn btn">Close</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- End Read more popup box section         -->
+        
+    
+
+    <!--                                        End Touch Slider Section                                      -->
+                                
+    <!-- Swiper JS -->
+  <script src="swiper.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+      var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 3,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+  
+</section>
+
+
+
+
+    <!--                                        Contact Section                                        -->
+    <section id="contact">
+        <div class="contact container">
+            <div>
+                <h1 class="section-title">Contact</h1>
+            </div>
+            <div class="contact-items">
+                <div class="contact-item">
+                    <div class="icon"><img src="https://img.icons8.com/nolan/96/phone.png"/></div>
+                    <div class="contact-info">
+                        <h1>Phone</h1>
+                        <h2>+1 234 547 890</h2>
+                        <h2>+1 234 547 890</h2>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon"><img src="https://img.icons8.com/nolan/96/email.png"/></div>
+                    <div class="contact-info">
+                        <h1>Email</h1>
+                        <h2>Spaceinfo@gmail.com</h2>
+                        
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon"><img src="https://img.icons8.com/nolan/96/address.png"/></div>
+                    <div class="contact-info">
+                        <h1>Address</h1>
+                        <h2>Space Industry 101</h2>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--                                        End Contact Section                                        -->
+
+
+
+    <!--                                        Footer Section                                        -->
+    
+    <section id="footer">
+        
+        <div class="footer container">
+            <div class="brand">
+                <h1>Life In Space</h1>
+            </div>
+            <h2>Information of the website</h2>
+            <div class="social-icon">
+                <div class="social-item">
+                    <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO"><img src="https://img.icons8.com/nolan/96/facebook-new.png"/></a>
+                </div>
+                <div class="social-item">
+                    <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO"><img src="https://img.icons8.com/nolan/96/instagram-new.png"/></a>
+                </div>
+                <div class="social-item">
+                    <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO"><img src="https://img.icons8.com/nolan/96/twitter.png"/></a>
+                </div>
+                <div class="social-item">
+                    <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO"><img src="https://img.icons8.com/nolan/96/skype.png"/></a>
+                </div>
+            </div>
+            <p class="copyright">copyright &copy; Reserved. All content and images were used for educational purposes. MMCC2041 History Space 2020.</p>
+        </div>
+    </section>
+    <!--                                        End Footer Section                                        -->
+    <a href="#" class="gotopbtn"><i class="fa fa-arrow-up"></i></a>
+
+    <script src="./app.js"></script>
+</body>
+</html>
+
+
+<!-- 
+
+    timeline.html Reference
+
+Content
+	• Discovery Section
+		○ Burress, B., 2020. Eight Of The Most Important Space Discoveries Since The Apollo Landings | KQED. [online] KQED. Available at: <https://www.kqed.org/science/1945508/eight-big-space-discoveries-since-the-apollo-landings> [Accessed 10 October 2020].
+        ○ Australian Geographic. 2020. Timeline Of Space Exploration - Australian Geographic. [online] Available at: <https://www.australiangeographic.com.au/topics/science-environment/2012/08/timeline-of-space-exploration/> [Accessed 5 November 2020].
+
+Image
+
+    • Logo
+        ○ Used Photoshop to cut out the background and changed the text
+		○ https://www.freepik.com/premium-vector/astronaut-logo_4207098.htm
+    • Banner Section
+        ○ Used Photoshop to cut the images out and separate them on their own unique image piece
+		○ https://www.freepik.com/free-vector/lovely-galaxy-background-with-flat-design_2859825.htm
+	• Timeline Section
+		○ https://en.wikipedia.org/wiki/Sputnik_1
+		○ https://phys.org/news/2017-11-dog-star-scientist-recalls-laika.html
+		○ https://helisulbaran.blogspot.com/2014/07/29-de-julio-1958-se-crea-la-nasa.html
+		○ https://www.tmc.edu/news/2019/06/how-rice-university-tethered-houston-to-space/
+		○ https://www.pinterest.com.au/pin/464855992763622522/
+		○ https://www.pinterest.com.au/pin/203858320621326829/
+		○ https://www.stripes.com/news/us/astronaut-john-young-dies-flew-in-gemini-apollo-and-space-shuttle-programs-1.505547
+		○ https://www.space.com/13689-nasa-amazing-mars-rover-curiosity-science.html
+		○ https://www.upi.com/Science_News/2020/05/21/SpaceXs-Crew-Dragon-spacecraft-faces-its-biggest-test/1571590000905/
+
+	• Discovery Section
+		○ https://www.bttoronto.ca/2017/02/23/seven-earth-size-worlds-found-orbiting-star-outside-our-solar-system/
+		○ https://www.technologyreview.com/2019/11/08/132013/will-the-universes-expansion-mean-planets-no-longer-orbit-stars/
+		○ https://phys.org/news/2020-06-ocean-jupiter-moon-europa-habitable.html
+		○ https://scitechdaily.com/future-gravitational-wave-detectors-to-detect-millions-of-black-holes-the-evolution-of-the-universe/
+		○ https://www.axios.com/first-black-hole-photo-what-we-learned-9b4728d6-c960-404a-b135-9425453817e6.html
+		
+
+Video
+	• Discovery Section
+		○ https://www.youtube.com/watch?v=9xhNd-HSq0k&ab_channel=DeepAstronomy
+		○ https://www.youtube.com/watch?v=k9EKnqzNBWQ&feature=emb_title&ab_channel=NationalScienceFoundation
+		○ https://www.youtube.com/watch?v=DZC-HfvMZnM&feature=emb_title&ab_channel=Seeker
+		○ https://www.youtube.com/watch?v=rJLtT0QXoPo&feature=emb_title
+		○ https://www.youtube.com/watch?v=S_GVbuddri8&feature=emb_title&ab_channel=Veritasium
+		
+
+
+ -->

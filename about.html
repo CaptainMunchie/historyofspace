@@ -1,0 +1,401 @@
+<!--
+/* 
+ * MAS2041 2020 - Major Project
+ * Name: Jeffrey Song
+ * Student Number: 45405735
+*/
+-->
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+<title>MMCC2041</title>
+<link href="styles.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<link href="swiper.min.css" rel="stylesheet" />
+
+<script>
+$(document).ready(function() { 
+
+
+
+//Image Gallery Section
+
+$('.list').click(function(){
+    const value = $(this).attr('data-filter');
+    if(value == 'All'){
+        $('.itemBox').show('1000');
+    }
+    else{
+        $('.itemBox').not('.'+value).hide('1000');
+        $('.itemBox').filter('.'+value).show('1000');
+    }
+
+    $('.list').click(function(){
+        $(this).addClass('active').siblings().removeClass('active');
+    })
+})
+
+//Popup Image Gallery Section
+
+$(".popup img").click(function() {
+    var $src = $(this).attr("src");
+    
+
+    $(".show").fadeIn();
+    $(".img-show img").attr("src", $src);
+    
+    
+});
+
+$(".closeGallery, .overlay").click(function() {
+    $(".show").fadeOut();
+})
+
+
+})
+</script>
+</head>
+<body>
+    <header id="menu">
+        <div class="menu container">
+            <div class="nav-bar">
+                <div class="brand logo">
+                    <a href="index.html"><img src="images/logo.png" ></a>
+                </div>
+                <div class="nav-list">
+                    <div class="hamburger"><div class="bar"></div></div>
+                    <ul>
+                        <li><a href="index.html" data-after="Home">Home</a></li>
+                        <li><a href="timeline.html" data-after="Timeline">Timeline</a></li>
+                        <li><a href="mankind.html" data-after="Mankind">Mankind</a></li>
+                        <li><a href="mission.html" data-after="Mission">Mission</a></li>
+                        <li><a href="about.html" data-after="About">About</a></li>
+                        <!-- <li><a href="contact.html" data-after="Contact">Contact</a></li> -->
+                        <!-- <li><a href="reference.html" data-after="reference">Reference</a></li> -->
+                    </ul>
+                </div>
+            </div>
+
+            
+        
+    </header>
+
+    <!--                                        Banner Section                                        -->
+    <section class="timeline-banner banner">
+        <div class="sky">
+            <div class="stars3"></div>
+
+        </div>
+        <div class="title">
+            
+            <h1>About<span></span></h1>
+        </div>
+    
+        <div class="spaceContainer">
+
+            
+            <ul id="scene">
+                <!-- <li class="layer background" id="background"><img src="images/bg2.jpg"></li> -->
+                <li class="layer planet1" ><img src="images/planet1.png" id="planet1"></li>
+                <li class="layer planet2" ><img src="images/planet2.png" id="planet2"></li>
+                <li class="layer astronaut" ><img src="images/astronaut.png" id="astronaut"></li>
+                <li class="layer rocket" ><img src="images/rocket.png" id="rocket"></li>
+            </ul>
+        </div>
+        <script type="text/javascript">
+            // let background = document.getElementById("background");
+            let planet1 = document.getElementById("planet1");
+            let planet2 = document.getElementById("planet2");
+            let astronaut = document.getElementById("astronaut");
+            let rocket = document.getElementById("rocket");
+
+            window.addEventListener('scroll', function(){
+                var value = window.scrollY;
+
+                // background.style.top = value * 0.5 + 'px';
+                planet1.style.left = -value * 0.2 + 'px';
+                planet1.style.top = -value * 0.2 + 'px';
+                planet2.style.top = value * 0.3 + 'px';
+                planet2.style.left = value * 0.3 + 'px';
+                astronaut.style.top = -value * 0.1 + 'px';
+                astronaut.style.left = -value * 0.1 + 'px';
+                rocket.style.left = value * 0.7 + 'px';
+                rocket.style.top = -value * 0.7 + 'px';
+                
+            })
+        </script>
+     
+        
+    </section>
+    <!--                                        End Banner Section                                      -->
+
+    <!--                                        About Us Section                                      -->
+    <section id="about-section">
+        <div class="about-section">
+            <div class="inner-container">
+                <h1>About Us</h1>
+                <p class="text">
+                    Our Website hope to broaden the people's mind of the universe and teach them a valuable lesson where its improving their daily lives, sharing to other people or just for fun. The professional team are excited to present this website to the world and take you on a journey into the unknown. We will try with the best of our ability to discover the mystery of the universe and share it with you guys.
+                </p>
+                
+            </div>
+        </div>
+    </section>
+    <!--                                        End About Us Section                                      -->
+
+
+
+    <!--                                        Meet the Team Section                                      -->
+    <section id="teamMembers">
+        
+        <div class="info-top">
+            <h1 class="section-title team">Developers</h1>            
+        </div>
+
+        
+
+        <div class="teamMembers">
+            <div class="card">
+                <div class="card-image">
+                    <img src="images/bg1.jpg" alt="background">
+                </div>
+                <div class="profile-image">
+                    <img src="images/ninja.png" alt="ninja">
+                </div>
+                <div class="card-content">
+                    <h3>Ninja</h3>
+                    <p>Front End Web Developer</p>
+                </div>
+                <div class="icons">
+                    <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO"><i class="fa fa-facebook-official"></i></a>
+                    <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO"><i class="fa fa-twitter-square"></i></a>
+                    <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO"><i class="fa fa-instagram"></i></a>
+                </div>
+            </div>
+    
+            <div class="card">
+                <div class="card-image">
+                    <img src="images/bg1.jpg" alt="background">
+                </div>
+                <div class="profile-image">
+                    <img src="images/cowboy.png" alt="cowboy">
+                </div>
+                <div class="card-content">
+                    <h3>Cowboy</h3>
+                    <p>Back End Web Developer</p>
+                </div>
+                <div class="icons">
+                    <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO"><i class="fa fa-facebook-official"></i></a>
+                    <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO"><i class="fa fa-twitter-square"></i></a>
+                    <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO"><i class="fa fa-instagram"></i></a>
+                </div>
+            </div>
+    
+            <div class="card">
+                <div class="card-image">
+                    <img src="images/bg1.jpg" alt="background">
+                </div>
+                <div class="profile-image">
+                    <img src="images/astronaut1.png" alt="astronaut">
+                </div>
+                <div class="card-content">
+                    <h3>Astronaut</h3>
+                    <p>Data Analysis</p>
+                </div>
+                <div class="icons">
+                    <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO"><i class="fa fa-facebook-official"></i></a>
+                    <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO"><i class="fa fa-twitter-square"></i></a>
+                    <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO"><i class="fa fa-instagram"></i></a>
+                </div>
+            </div>
+    
+            <div class="card">
+                <div class="card-image">
+                    <img src="images/bg1.jpg" alt="background">
+                </div>
+                <div class="profile-image">
+                    <img src="images/alien.png" alt="alien">
+                </div>
+                <div class="card-content">
+                    <h3>Alien</h3>
+                    <p>Reserch Developer</p>
+                </div>
+                <div class="icons">
+                    <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO"><i class="fa fa-facebook-official"></i></a>
+                    <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO"><i class="fa fa-twitter-square"></i></a>
+                    <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO"><i class="fa fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        
+    </section>
+    <!--                                        End Meet the Team Section                                      -->
+
+    <!--                                    Services Section                                     -->
+    <section>
+        <div class="services-section">
+            <div class="padding_service">
+                <h1 class="section-title">Our Services</h1>
+                
+            </div>
+            
+            <div class="inner-width service-item">   
+                
+                <div class="contact-map service-item">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3316.437711263557!2d151.11312326574298!3d-33.77519322163911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a6727337c5e9%3A0x61bd52277696dfc2!2sMacquarie%20University!5e0!3m2!1sen!2sau!4v1601980204222!5m2!1sen!2sau" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                
+                <div class="services-container">
+        
+                <div class="service-box">
+                    <div class="service-icon">
+                    <i class="fa fa-book"></i>
+                    </div>
+                    <div class="service-title">Knowledge</div>
+                    <div class="service-desc">
+                    Knowledge is power, the more you know the less your afraid and prepared to understand it more.
+                    </div>
+                </div>
+        
+                <div class="service-box">
+                    <div class="service-icon">
+                    <i class="fa fa-university"></i>
+                    </div>
+                    <div class="service-title">Eduction</div>
+                    <div class="service-desc">
+                    This website will give you insight of what we know so far about space and hope to teach you the wonders of the unknown.
+                    </div>
+                </div>
+        
+                <div class="service-box">
+                    <div class="service-icon">
+                    <i class="fa fa-rocket"></i>
+                    </div>
+                    <div class="service-title">Resources</div>
+                    <div class="service-desc">
+                    Abundance of resources available on this website for free and we need is your support and excitement.
+                    </div>
+                </div>
+        
+                <div class="service-box">
+                    <div class="service-icon">
+                    <i class="fa fa-handshake-o"></i>
+                    </div>
+                    <div class="service-title">Jobs</div>
+                    <div class="service-desc">
+                    provide job oportunities for those who are interesting in our company to pursue in researching of space.
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+    </section>
+    <!--                                    End Services Section                                     -->
+               
+
+    <!--                                        Contact Section                                        -->
+    <section id="contact">
+        <div class="contact container">
+            <div>
+                <h1 class="section-title">Contact</h1>
+            </div>
+            <div class="contact-items">
+                <div class="contact-item">
+                    <div class="icon"><img src="https://img.icons8.com/nolan/96/phone.png"/></div>
+                    <div class="contact-info">
+                        <h1>Phone</h1>
+                        <h2>+1 234 547 890</h2>
+                        <h2>+1 234 547 890</h2>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon"><img src="https://img.icons8.com/nolan/96/email.png"/></div>
+                    <div class="contact-info">
+                        <h1>Email</h1>
+                        <h2>Spaceinfo@gmail.com</h2>
+                        
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon"><img src="https://img.icons8.com/nolan/96/address.png"/></div>
+                    <div class="contact-info">
+                        <h1>Address</h1>
+                        <h2>Space Industry 101</h2>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--                                        End Contact Section                                        -->
+
+
+
+    <!--                                        Footer Section                                        -->
+    
+    <section id="footer">
+        
+        <div class="footer container">
+            <div class="brand">
+                <h1>Life In Space</h1>
+            </div>
+            <h2>Information of the website</h2>
+            <div class="social-icon">
+                <div class="social-item">
+                    <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO"><img src="https://img.icons8.com/nolan/96/facebook-new.png"/></a>
+                </div>
+                <div class="social-item">
+                    <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO"><img src="https://img.icons8.com/nolan/96/instagram-new.png"/></a>
+                </div>
+                <div class="social-item">
+                    <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO"><img src="https://img.icons8.com/nolan/96/twitter.png"/></a>
+                </div>
+                <div class="social-item">
+                    <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO"><img src="https://img.icons8.com/nolan/96/skype.png"/></a>
+                </div>
+            </div>
+            <p class="copyright">copyright &copy; Reserved. All content and images were used for educational purposes. MMCC2041 History Space 2020.</p>
+        </div>
+    </section>
+    <!--                                        End Footer Section                                        -->
+    <a href="#" class="gotopbtn"><i class="fa fa-arrow-up"></i></a>
+    <script src="./app.js"></script>
+</body>
+</html>
+
+<!-- 
+
+    about.html Reference
+
+Content
+
+    • Original
+
+Image
+
+	• Logo
+        ○ Used Photoshop to cut out the background and changed the text
+		○ https://www.freepik.com/premium-vector/astronaut-logo_4207098.htm
+    • Banner Section
+        ○ Used Photoshop to cut the images out and separate them on their own unique image piece
+		○ https://www.freepik.com/free-vector/lovely-galaxy-background-with-flat-design_2859825.htm
+	• Developers icon
+		○ Astronaut
+			○ https://www.flaticon.com/free-icon/astronaut-helmet_3204018?term=astronaut&page=1&position=2
+		○ Alien
+			○ https://www.flaticon.com/free-icon/alien_3306594?term=alien&page=1&position=2
+		○ Cowboy
+			○ https://www.flaticon.com/free-icon/cowboy_2918917?term=cowboy&page=1&position=40
+		○ Ninja
+			○ https://www.flaticon.com/free-icon/ninja_1063507?term=ninja&page=1&position=69
+		
+
+
+ -->
